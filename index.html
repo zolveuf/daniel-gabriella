@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gabriella &amp; Daniel – Bröllop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-lang="sv">
+    <div class="language-overlay" id="languageOverlay" aria-modal="true" role="dialog">
+      <div class="language-overlay__panel">
+        <p class="language-overlay__eyebrow">Välj språk / Odaberite jezik</p>
+        <h2 class="language-overlay__title">Gabriella &amp; Daniel</h2>
+        <p class="language-overlay__text">
+          <span class="lang-sv">Välj språk för bröllopssidan.</span>
+          <span class="lang-hr">Odaberite jezik za naše vjenčanje.</span>
+        </p>
+        <div class="language-overlay__buttons">
+          <button class="btn btn--ghost" data-lang-choice="sv">Svenska</button>
+          <button class="btn btn--ghost" data-lang-choice="hr">Hrvatski</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero" id="top">
+      <nav class="nav">
+        <a href="#top" class="nav__logo">G &amp; D</a>
+        <button class="nav__toggle" aria-label="Meny">
+          <span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li>
+            <a href="#couple">
+              <span class="lang-sv">Gabriella &amp; Daniel</span>
+              <span class="lang-hr">Gabriella i Daniel</span>
+            </a>
+          </li>
+          <li>
+            <a href="#ceremony">
+              <span class="lang-sv">Vigsel</span>
+              <span class="lang-hr">Ceremonija</span>
+            </a>
+          </li>
+          <li>
+            <a href="#reception">
+              <span class="lang-sv">Bröllopsfest</span>
+              <span class="lang-hr">Proslava</span>
+            </a>
+          </li>
+          <li>
+            <a href="#rsvp">
+              <span class="lang-sv">OSA</span>
+              <span class="lang-hr">Potvrda dolaska</span>
+            </a>
+          </li>
+          <li>
+            <a href="#speech">
+              <span class="lang-sv">Tal &amp; spex</span>
+              <span class="lang-hr">Govori &amp; zabava</span>
+            </a>
+          </li>
+          <li>
+            <a href="#quiz">
+              <span class="lang-sv">Quiz</span>
+              <span class="lang-hr">Kviz</span>
+            </a>
+          </li>
+          <li>
+            <a href="#wishlist">
+              <span class="lang-sv">Önskelista</span>
+              <span class="lang-hr">Popis želja</span>
+            </a>
+          </li>
+          <li>
+            <a href="#hosts">
+              <span class="lang-sv">Värdar</span>
+              <span class="lang-hr">Domaćini</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__eyebrow">
+            <span class="lang-sv">Bröllop</span>
+            <span class="lang-hr">Vjenčanje</span>
+          </p>
+          <h1>Gabriella &amp; Daniel</h1>
+          <p class="hero__date">
+            <span class="lang-sv">20 juni 2026 – Ryssby, Sverige</span>
+            <span class="lang-hr">20. lipnja 2026. – Ryssby, Švedska</span>
+          </p>
+          <p class="hero__sub">
+            <span class="lang-sv">
+              Välkommen att fira vår dag med oss.
+            </span>
+            <span class="lang-hr">
+              Dobrodošli da s nama proslavite naš dan.
+            </span>
+          </p>
+
+          <div class="hero__meta">
+            <div class="hero__countdown">
+              <span class="hero__count-label">Nedräkning till bröllopet</span>
+              <div class="hero__count-values" id="countdown"></div>
+            </div>
+            <a class="btn btn--primary" href="#rsvp">
+              <span class="lang-sv">OSA &amp; praktisk info</span>
+              <span class="lang-hr">Potvrda dolaska &amp; info</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <div class="hero__image-frame">
+            <img
+              src="assets/IMG_9964-193a018f-7b45-404b-9dd9-e173b85d1f3a.png"
+              alt="Gabriella och Daniel"
+            />
+          </div>
+          <img
+            class="hero__flower hero__flower--left"
+            src="assets/8-652aa440-271e-4b77-943b-c9e3f88ee364.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hero__flower hero__flower--right"
+            src="assets/10-c10a4dd6-febf-411e-8be3-f2b0a29d1aea.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="couple" class="section section--split">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Hur allt började</span>
+            <span class="lang-hr">Kako je sve počelo</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Gabriella &amp; Daniel</span>
+            <span class="lang-hr">Gabriella i Daniel</span>
+          </h2>
+        </div>
+        <div class="section__content">
+          <p>
+            <span class="lang-sv">
+              Här kan ni skriva en kort text om er – hur ni träffades och vad ni
+              ser fram emot med bröllopsdagen.
+            </span>
+            <span class="lang-hr">
+              Ovdje možete napisati nekoliko rečenica o sebi – kako ste se
+              upoznali i čemu se najviše radujete na dan vjenčanja.
+            </span>
+          </p>
+        </div>
+        <div class="section__side section__side--media">
+          <div class="photo-grid">
+            <img
+              src="assets/att.MJVEs2VhgyVaScTeB8xJGvJQZlMS1QSnqubLWv3ikKQ-e3aba0b8-d978-4a04-bf5e-0a5dcca40d75.png"
+              alt=""
+            />
+            <img
+              src="assets/att.DQDBHjUuvriSGvOW4oamEOXqIGYCHo-qmNZlPwgsFV0-e69cb14a-912c-470d-969f-08bc8b4a461f.png"
+              alt=""
+            />
+            <img
+              src="assets/att.XbBdh970S6LBXC5ps5aoBLdxy_prZKGXMxVB62ShRG4-e56119b6-7260-47b6-b797-f1e809e61cc2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="ceremony" class="section section--accent">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Vigsel</span>
+            <span class="lang-hr">Ceremonija vjenčanja</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Vigsel i Ryssby kyrka</span>
+            <span class="lang-hr">Vjenčanje u crkvi u Ryssbyju</span>
+          </h2>
+        </div>
+        <div class="section__grid">
+          <div>
+            <p>
+              <span class="lang-sv">
+                Dagen börjar med vigsel i Ryssby kyrka kl.
+                <strong>15.00</strong>. Var gärna på plats i god tid. Efter
+                ceremonin tar vi oss tillsammans vidare mot bröllopsfesten.
+              </span>
+              <span class="lang-hr">
+                Dan započinje ceremonijom vjenčanja u crkvi u Ryssbyju u
+                <strong>15:00</strong>. Molimo vas da dođete na vrijeme. Nakon
+                ceremonije zajedno odlazimo na proslavu vjenčanja.
+              </span>
+            </p>
+            <ul class="info-list">
+              <li>
+                <strong>
+                  <span class="lang-sv">Datum</span>
+                  <span class="lang-hr">Datum</span>
+                </strong>
+                : 20 juni / lipnja 2026
+              </li>
+              <li>
+                <strong>
+                  <span class="lang-sv">Adress</span>
+                  <span class="lang-hr">Adresa</span>
+                </strong>
+                : Kyrkovägen 1, 341 76 Ryssby
+              </li>
+              <li>
+                <strong>
+                  <span class="lang-sv">Klädkod</span>
+                  <span class="lang-hr">Dresscode</span>
+                </strong>
+                : <span class="lang-sv">Kavaj</span>
+                <span class="lang-hr">Odijelo</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="section__muted">
+              <span class="lang-sv">
+                Här kan ni lägga in en länk till karta (Google Maps) eller mer
+                detaljerad vägbeskrivning.
+              </span>
+              <span class="lang-hr">
+                Ovdje možete staviti poveznicu na kartu (Google Maps) ili
+                detaljniji opis puta.
+              </span>
+            </p>
+            <a
+              href="#"
+              class="btn btn--ghost"
+              aria-label="Länk till karta, byt ut # mot riktig länk"
+              ><span class="lang-sv">Visa karta</span>
+              <span class="lang-hr">Prikaži kartu</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="reception" class="section">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Bröllopsfesten</span>
+            <span class="lang-hr">Svadbena proslava</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Bröllopsfest i Ryssbygården</span>
+            <span class="lang-hr">Proslava u Ryssbygårdenu</span>
+          </h2>
+        </div>
+        <div class="section__grid">
+          <div>
+            <p>
+              <span class="lang-sv">
+                Efter vigseln fortsätter vi firandet i
+                <strong>Ryssbygården</strong>. Där väntar mingel, middag, tal,
+                spex och dans in på småtimmarna.
+              </span>
+              <span class="lang-hr">
+                Nakon ceremonije nastavljamo slavlje u
+                <strong>Ryssbygårdenu</strong>. Tamo nas čekaju druženje,
+                večera, govori i ples do kasno u noć.
+              </span>
+            </p>
+            <ul class="info-list">
+              <li>
+                <strong>
+                  <span class="lang-sv">Adress</span>
+                  <span class="lang-hr">Adresa</span>
+                </strong>
+                : (fyll i adress till festlokal)
+              </li>
+              <li>
+                <strong>
+                  <span class="lang-sv">Tid</span>
+                  <span class="lang-hr">Vrijeme</span>
+                </strong>
+                : cirka kl. 17.00 – sent
+              </li>
+              <li>
+                <strong>
+                  <span class="lang-sv">Bar</span>
+                  <span class="lang-hr">Bar</span>
+                </strong>
+                :
+                <span class="lang-sv">
+                  Information om dryck, betalning osv.
+                </span>
+                <span class="lang-hr">
+                  Informacije o piću, plaćanju itd.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              <span class="lang-sv">
+                Har du frågor kring boende, transport eller annat praktiskt?
+                Tveka inte att höra av dig till värdarna längre ned på sidan.
+              </span>
+              <span class="lang-hr">
+                Imate li pitanja o smještaju, prijevozu ili nečemu praktičnom?
+                Slobodno se javite domaćinima niže na stranici.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="rsvp" class="section section--accent">
+        <div class="section__header">
+          <p class="section__eyebrow">OSA // Potvrda dolaska</p>
+          <h2>OSA senast 1 maj 2026</h2>
+        </div>
+        <div class="section__grid">
+          <div>
+            <p>
+              Vi blir väldigt glada om du kan svara så snart som möjligt, men
+              senast <strong>1 maj 2026</strong>. Använd gärna formuläret nedan
+              för att anmäla dig, meddela eventuell specialkost och annat vi
+              behöver veta.
+            </p>
+            <ul class="info-list">
+              <li>Namn &amp; efternamn // Ime i prezime</li>
+              <li>Specialkost // Posebna prehrana</li>
+              <li>Telefonnummer &amp; mejladress</li>
+            </ul>
+          </div>
+          <div>
+            <p class="section__muted">
+              Byt ut denna ruta mot en inbäddad länk till ert Google-formulär
+              (OSA-formulär) när det är klart.
+            </p>
+            <a href="#" class="btn btn--primary">Öppna OSA-formulär</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="speech" class="section">
+        <div class="section__header">
+          <p class="section__eyebrow">Tal och spex // Govori i zabavni nastup</p>
+          <h2>Vill du hålla tal eller hitta på något kul?</h2>
+        </div>
+        <div class="section__grid">
+          <div>
+            <p>
+              Om du vill hålla tal, spela musik, uppträda eller överraska oss på
+              annat sätt under kvällen – hör gärna av dig i god tid via formuläret
+              eller direkt till värdarna.
+            </p>
+          </div>
+          <div>
+            <p class="section__muted">
+              Här kan ni länka till ett separat formulär för tal och spex (Google
+              Forms), där gäster fyller i namn, relation, typ av inslag och
+              ungefärlig längd.
+            </p>
+            <a href="#" class="btn btn--ghost">Anmäl tal / spex</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section section--accent">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            Vem känner brudparet bäst? // Tko najbolje poznaje mladence?
+          </p>
+          <h2>Quiz om Gabriella &amp; Daniel</h2>
+        </div>
+        <div class="section__grid">
+          <div>
+            <p>
+              Under kvällen kommer vi att ha ett quiz om brudparet – perfekt
+              tillfälle att bevisa hur bra du känner Gabriella och Daniel och kanske
+              vinna ett fint pris.
+            </p>
+          </div>
+          <div>
+            <p class="section__muted">
+              Länka här till ert quiz eller formulär med frågor om brudparet, som
+              gästerna kan fylla i på plats eller i förväg.
+            </p>
+            <a href="#" class="btn btn--ghost">Öppna quiz</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="wishlist" class="section">
+        <div class="section__header">
+          <p class="section__eyebrow">Önskelista // Lista želja</p>
+          <h2>Gåvor</h2>
+        </div>
+        <div class="section__content">
+          <p>
+            Er närvaro på vår dag är den finaste gåvan – men om du ändå vill ge
+            något hittar du vår önskelista via länken nedan.
+          </p>
+          <p class="section__muted">
+            Länka här till önskelista (t.ex. Google-dokument, butik eller annan
+            sida).
+          </p>
+          <a href="#" class="btn btn--primary">Till önskelistan</a>
+        </div>
+      </section>
+
+      <section id="hosts" class="section section--hosts">
+        <div class="section__header">
+          <p class="section__eyebrow">Värdarna // Domaćini</p>
+          <h2>Har du frågor?</h2>
+        </div>
+        <div class="hosts">
+          <article class="host-card">
+            <img
+              src="assets/11-4825fc72-7719-4bf8-951a-769829c73136.png"
+              alt=""
+              class="host-card__photo"
+            />
+            <div class="host-card__body">
+              <h3>Evelina Lindman</h3>
+              <p>Brudens syster // Sestra mladenke</p>
+              <p class="host-card__contact">
+                Tel: <a href="tel:+46706786692">+46 70 678 66 92</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="host-card">
+            <img
+              src="assets/6-715ac35e-4f0f-4f27-8b14-4a41b4cb0cfd.png"
+              alt=""
+              class="host-card__photo"
+            />
+            <div class="host-card__body">
+              <h3>Lucas Jansson</h3>
+              <p>Brudens bror // Brat mladenke</p>
+              <p class="host-card__contact">
+                Tel: <a href="tel:+46702890919">+46 70 289 09 19</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="host-card">
+            <img
+              src="assets/5-67f7b80d-77f2-4e23-9466-0937d96fb56d.png"
+              alt=""
+              class="host-card__photo"
+            />
+            <div class="host-card__body">
+              <h3>Martin Pranjic</h3>
+              <p>Brudgummens bror // Brat mladoženje</p>
+              <p class="host-card__contact">
+                Tel: <span>*mobilnummer*</span></p>
+            </div>
+          </article>
+        </div>
+        <p class="section__muted section__muted--center">
+          Du får gärna höra av dig om du har frågor – på svenska, engelska eller
+          kroatiska.
+        </p>
+      </section>
+
+      <section class="section section--gallery">
+        <div class="section__header">
+          <p class="section__eyebrow">Bilder</p>
+          <h2>Minnen med brudparet</h2>
+        </div>
+        <div class="photo-strip">
+          <img src="assets/1-b5718d80-5b8a-41c6-890e-ceede2132a92.png" alt="" />
+          <img src="assets/2-35421abf-bb09-439b-b855-07692f7e5d59.png" alt="" />
+          <img src="assets/3-86346df9-9d6f-4215-8abe-680bdf417940.png" alt="" />
+          <img src="assets/4-2c6ff251-c16e-44bf-889d-9a67617d4cdb.png" alt="" />
+          <img src="assets/9-b217bf44-717a-41f9-af5d-4da538b72635.png" alt="" />
+          <img src="assets/12-0fec3e12-c56f-454b-9b34-470a4bb7c0ea.png" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Gabriella &amp; Daniel • 20 juni 2026 • Ryssby</p>
+      <p class="footer__secondary">
+        Sidan är skapad för familj och vänner – sprid gärna men ändra inte
+        informationen utan att prata med brudparet.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
