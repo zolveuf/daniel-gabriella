@@ -29,11 +29,14 @@ setInterval(updateCountdown, 60 * 1000);
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("nav__links--open");
+    document.body.classList.toggle("nav-open");
   });
 
   navLinks.addEventListener("click", (event) => {
-    if (event.target.tagName.toLowerCase() === "a") {
+    const link = event.target.closest("a");
+    if (link) {
       navLinks.classList.remove("nav__links--open");
+      document.body.classList.remove("nav-open");
     }
   });
 }
