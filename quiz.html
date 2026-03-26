@@ -57,7 +57,7 @@
 
         <form
           class="rsvp-form"
-          action="https://formkeep.com/f/YOUR_FORMKEEP_KEY"
+          action="https://formkeep.com/f/9791e76f76c7"
           method="POST"
           accept-charset="UTF-8"
         >
@@ -69,6 +69,9 @@
             tabindex="-1"
             autocomplete="off"
           />
+          <input type="hidden" name="_redirect_url" value="tack.html?source=quiz" />
+          <input type="hidden" name="_next" value="tack.html?source=quiz" />
+          <input type="hidden" name="form_type" value="quiz" />
 
           <label for="quizName">
             <span class="lang-sv">Namn</span>
@@ -82,11 +85,76 @@
           </label>
           <input id="quizEmail" name="email" type="email" required />
 
-          <label for="quizAnswers">
-            <span class="lang-sv">Svara här (du lägger in frågorna senare)</span>
-            <span class="lang-hr">Odgovori ovdje (pitanja dodajete kasnije)</span>
+          <label for="q1">
+            <span class="lang-sv">Fråga 1 (placeholder)</span>
+            <span class="lang-hr">Pitanje 1 (placeholder)</span>
           </label>
-          <textarea id="quizAnswers" name="quiz_answers" rows="8"></textarea>
+          <select id="q1" name="q1" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="A">Alternativ A</option>
+            <option value="B">Alternativ B</option>
+            <option value="C">Alternativ C</option>
+            <option value="D">Alternativ D</option>
+          </select>
+
+          <label for="q2">
+            <span class="lang-sv">Fråga 2 (placeholder)</span>
+            <span class="lang-hr">Pitanje 2 (placeholder)</span>
+          </label>
+          <select id="q2" name="q2" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="A">Alternativ A</option>
+            <option value="B">Alternativ B</option>
+            <option value="C">Alternativ C</option>
+            <option value="D">Alternativ D</option>
+          </select>
+
+          <label for="q3">
+            <span class="lang-sv">Fråga 3 (placeholder)</span>
+            <span class="lang-hr">Pitanje 3 (placeholder)</span>
+          </label>
+          <select id="q3" name="q3" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="A">Alternativ A</option>
+            <option value="B">Alternativ B</option>
+            <option value="C">Alternativ C</option>
+            <option value="D">Alternativ D</option>
+          </select>
+
+          <label for="q4">
+            <span class="lang-sv">Fråga 4 (placeholder)</span>
+            <span class="lang-hr">Pitanje 4 (placeholder)</span>
+          </label>
+          <select id="q4" name="q4" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="A">Alternativ A</option>
+            <option value="B">Alternativ B</option>
+            <option value="C">Alternativ C</option>
+            <option value="D">Alternativ D</option>
+          </select>
+
+          <label for="q5">
+            <span class="lang-sv">Fråga 5 (placeholder)</span>
+            <span class="lang-hr">Pitanje 5 (placeholder)</span>
+          </label>
+          <select id="q5" name="q5" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="A">Alternativ A</option>
+            <option value="B">Alternativ B</option>
+            <option value="C">Alternativ C</option>
+            <option value="D">Alternativ D</option>
+          </select>
+
+          <label for="quizExtra">
+            <span class="lang-sv">Utslagsfråga / extra kommentar (valfritt)</span>
+            <span class="lang-hr">Dodatno pitanje / komentar (nije obavezno)</span>
+          </label>
+          <textarea
+            id="quizExtra"
+            name="quiz_extra"
+            rows="4"
+            placeholder="Skriv ditt svar här..."
+          ></textarea>
 
           <button class="btn btn--primary" type="submit">
             <span class="lang-sv">Skicka quiz</span>

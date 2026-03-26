@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tack! – Gabriella &amp; Daniel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-lang="sv" class="rsvp-page">
+    <div class="language-overlay" id="languageOverlay" aria-modal="true" role="dialog">
+      <div class="language-overlay__panel">
+        <p class="language-overlay__eyebrow">Välj språk / Odaberite jezik</p>
+        <h2 class="language-overlay__title">Gabriella &amp; Daniel</h2>
+        <div class="language-overlay__buttons">
+          <button class="btn btn--ghost" data-lang-choice="sv">Svenska</button>
+          <button class="btn btn--ghost" data-lang-choice="hr">Hrvatski</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html#top" class="nav__logo">G &amp; D</a>
+        <a class="nav__cta btn btn--primary" href="index.html#top">
+          <span class="lang-sv">Startsidan</span>
+          <span class="lang-hr">Početna</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section section--accent rsvp-form-section">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Tack</span>
+            <span class="lang-hr">Hvala</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Tack för ditt svar!</span>
+            <span class="lang-hr">Hvala na vašem odgovoru!</span>
+          </h2>
+        </div>
+        <div class="section__content">
+          <p>
+            <span class="lang-sv">
+              Vi har tagit emot din inskickning. Vi ser fram emot att fira tillsammans med dig.
+            </span>
+            <span class="lang-hr">
+              Zaprimili smo vašu prijavu. Veselimo se što ćemo zajedno proslaviti.
+            </span>
+          </p>
+          <p class="section__muted">
+            <span class="lang-sv">Om något blev fel, skicka gärna in formuläret igen.</span>
+            <span class="lang-hr">Ako je nešto pošlo po zlu, slobodno ponovno pošaljite obrazac.</span>
+          </p>
+          <a href="index.html#top" class="btn btn--primary">
+            <span class="lang-sv">Till startsidan</span>
+            <span class="lang-hr">Natrag na početnu</span>
+          </a>
+          <a href="quiz.html" class="btn btn--ghost" style="margin-left: 0.5rem">
+            <span class="lang-sv">Till quizet</span>
+            <span class="lang-hr">Na kviz</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
