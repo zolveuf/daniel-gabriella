@@ -65,3 +65,19 @@ if (languageOverlay && languageButtons.length) {
   });
 }
 
+// FormKeep expects absolute redirect URLs. Build them at runtime.
+const redirectInputs = document.querySelectorAll("input[data-redirect-path]");
+if (redirectInputs.length) {
+  const isHttp = window.location.protocol === "http:" || window.location.protocol === "https:";
+  redirectInputs.forEach((input) => {
+    const redirectPath = input.getAttribute("data-redirect-path");
+    if (!redirectPath) return;
+    if (isHttp) {
+      input.value = new URL(redirectPath, window.location.href).toString();
+      return;
+    }
+    // On file:// previews, avoid invalid redirect URLs that can break submission.
+    input.removeAttribute("name");
+  });
+}
+
