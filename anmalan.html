@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anmälan – Gabriella &amp; Daniel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-lang="sv" class="rsvp-page">
+    <div class="language-overlay" id="languageOverlay" aria-modal="true" role="dialog">
+      <div class="language-overlay__panel">
+        <p class="language-overlay__eyebrow">Välj språk / Odaberite jezik</p>
+        <h2 class="language-overlay__title">Gabriella &amp; Daniel</h2>
+        <div class="language-overlay__buttons">
+          <button class="btn btn--ghost" data-lang-choice="sv">Svenska</button>
+          <button class="btn btn--ghost" data-lang-choice="hr">Hrvatski</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html#top" class="nav__logo">G &amp; D</a>
+        <a class="nav__cta btn btn--primary" href="index.html#top">
+          <span class="lang-sv">Tillbaka</span>
+          <span class="lang-hr">Natrag</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section rsvp-form-section">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">OSA</span>
+            <span class="lang-hr">Potvrda dolaska</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Anmälan till bröllopet</span>
+            <span class="lang-hr">Prijava za vjenčanje</span>
+          </h2>
+          <p class="section__muted">
+            <span class="lang-sv">Fyll i formuläret nedan senast 1 maj 2026.</span>
+            <span class="lang-hr">Molimo ispunite obrazac najkasnije do 1. svibnja 2026.</span>
+          </p>
+        </div>
+
+        <form
+          class="rsvp-form"
+          action="https://formkeep.com/f/YOUR_FORMKEEP_KEY"
+          method="POST"
+          accept-charset="UTF-8"
+        >
+          <!-- FormKeep anti-spam: should remain empty -->
+          <input
+            type="text"
+            name="_gotcha"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <label for="name">
+            <span class="lang-sv">Namn och efternamn</span>
+            <span class="lang-hr">Ime i prezime</span>
+          </label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">E-post</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="phone">
+            <span class="lang-sv">Telefonnummer</span>
+            <span class="lang-hr">Broj telefona</span>
+          </label>
+          <input id="phone" name="phone" type="tel" />
+
+          <label for="attendance">
+            <span class="lang-sv">Kommer du?</span>
+            <span class="lang-hr">Dolazite li?</span>
+          </label>
+          <select id="attendance" name="attendance" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="Ja">Ja / Da</option>
+            <option value="Nej">Nej / Ne</option>
+          </select>
+
+          <label for="diet">
+            <span class="lang-sv">Specialkost / allergier</span>
+            <span class="lang-hr">Posebna prehrana / alergije</span>
+          </label>
+          <textarea id="diet" name="diet" rows="4"></textarea>
+
+          <label for="speech">
+            <span class="lang-sv">Vill du hålla tal eller ordna spex?</span>
+            <span class="lang-hr">Želite li održati govor ili pripremiti nastup?</span>
+          </label>
+          <select id="speech" name="speech_interest">
+            <option value="">Välj / Odaberite</option>
+            <option value="Ja">Ja / Da</option>
+            <option value="Nej">Nej / Ne</option>
+          </select>
+
+          <label for="speechDetails">
+            <span class="lang-sv">Om ja, skriv gärna kort vad och ungefärlig längd</span>
+            <span class="lang-hr">Ako da, ukratko napišite što i okvirno trajanje</span>
+          </label>
+          <textarea id="speechDetails" name="speech_details" rows="4"></textarea>
+
+          <label for="message">
+            <span class="lang-sv">Övrigt meddelande</span>
+            <span class="lang-hr">Dodatna poruka</span>
+          </label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <button class="btn btn--primary" type="submit">
+            <span class="lang-sv">Skicka anmälan</span>
+            <span class="lang-hr">Pošalji prijavu</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

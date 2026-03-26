@@ -3,6 +3,13 @@ const navToggle = document.querySelector(".nav__toggle");
 const navLinks = document.querySelector(".nav__links");
 const languageOverlay = document.getElementById("languageOverlay");
 const languageButtons = document.querySelectorAll("[data-lang-choice]");
+const LANGUAGE_STORAGE_KEY = "weddingSiteLanguage";
+
+function applyLanguage(lang) {
+  const safeLang = lang === "hr" ? "hr" : "sv";
+  document.body.setAttribute("data-lang", safeLang);
+  document.documentElement.lang = safeLang;
+}
 
 function updateCountdown() {
   if (!countdownEl) return;
@@ -42,11 +49,17 @@ if (navToggle && navLinks) {
 }
 
 if (languageOverlay && languageButtons.length) {
+  const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (savedLanguage) {
+    applyLanguage(savedLanguage);
+    languageOverlay.classList.add("language-overlay--hidden");
+  }
+
   languageButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const lang = button.getAttribute("data-lang-choice") || "sv";
-      document.body.setAttribute("data-lang", lang);
-      document.documentElement.lang = lang === "hr" ? "hr" : "sv";
+      applyLanguage(lang);
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
       languageOverlay.classList.add("language-overlay--hidden");
     });
   });

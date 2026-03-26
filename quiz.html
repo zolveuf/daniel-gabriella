@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz – Gabriella &amp; Daniel</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-lang="sv" class="rsvp-page">
+    <div class="language-overlay" id="languageOverlay" aria-modal="true" role="dialog">
+      <div class="language-overlay__panel">
+        <p class="language-overlay__eyebrow">Välj språk / Odaberite jezik</p>
+        <h2 class="language-overlay__title">Gabriella &amp; Daniel</h2>
+        <div class="language-overlay__buttons">
+          <button class="btn btn--ghost" data-lang-choice="sv">Svenska</button>
+          <button class="btn btn--ghost" data-lang-choice="hr">Hrvatski</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html#top" class="nav__logo">G &amp; D</a>
+        <a class="nav__cta btn btn--primary" href="index.html#top">
+          <span class="lang-sv">Tillbaka</span>
+          <span class="lang-hr">Natrag</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section rsvp-form-section">
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Quiz</span>
+            <span class="lang-hr">Kviz</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Quiz om brudparet</span>
+            <span class="lang-hr">Kviz o mladencima</span>
+          </h2>
+          <p class="section__muted">
+            <span class="lang-sv">
+              Du kan lägga in frågorna senare. Fyll bara i dina svar när formuläret är klart.
+            </span>
+            <span class="lang-hr">
+              Pitanja možete dodati kasnije. Unesite vaše odgovore kada obrazac bude gotov.
+            </span>
+          </p>
+        </div>
+
+        <form
+          class="rsvp-form"
+          action="https://formkeep.com/f/YOUR_FORMKEEP_KEY"
+          method="POST"
+          accept-charset="UTF-8"
+        >
+          <!-- FormKeep anti-spam: should remain empty -->
+          <input
+            type="text"
+            name="_gotcha"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <label for="quizName">
+            <span class="lang-sv">Namn</span>
+            <span class="lang-hr">Ime</span>
+          </label>
+          <input id="quizName" name="name" type="text" required />
+
+          <label for="quizEmail">
+            <span class="lang-sv">E-post</span>
+            <span class="lang-hr">E-mail</span>
+          </label>
+          <input id="quizEmail" name="email" type="email" required />
+
+          <label for="quizAnswers">
+            <span class="lang-sv">Svara här (du lägger in frågorna senare)</span>
+            <span class="lang-hr">Odgovori ovdje (pitanja dodajete kasnije)</span>
+          </label>
+          <textarea id="quizAnswers" name="quiz_answers" rows="8"></textarea>
+
+          <button class="btn btn--primary" type="submit">
+            <span class="lang-sv">Skicka quiz</span>
+            <span class="lang-hr">Pošalji kviz</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
