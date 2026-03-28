@@ -26,7 +26,13 @@
 
     <header class="site-header">
       <nav class="nav">
-        <a href="#top" class="nav__logo">G &amp; D</a>
+        <div class="nav__start">
+          <a href="#top" class="nav__logo">G &amp; D</a>
+          <button type="button" class="nav__lang btn btn--ghost" id="langToggle">
+            <span class="lang-sv">Hrvatski</span>
+            <span class="lang-hr">Svenska</span>
+          </button>
+        </div>
         <button class="nav__toggle" aria-label="Meny">
           <span></span><span></span>
         </button>
@@ -101,7 +107,10 @@
 
           <div class="hero__meta">
             <div class="hero__countdown">
-              <span class="hero__count-label">Nedräkning till bröllopet</span>
+              <span class="hero__count-label">
+                <span class="lang-sv">Nedräkning till bröllopet</span>
+                <span class="lang-hr">Odbrojavanje do vjenčanja</span>
+              </span>
               <div class="hero__count-values" id="countdown"></div>
             </div>
             <a class="btn btn--primary" href="#rsvp">
@@ -114,8 +123,11 @@
         <div class="hero__image">
           <div class="hero__image-frame">
             <img
+              id="heroPhoto"
               src="assets/Hemsida/hero.jpg"
               alt="Gabriella och Daniel"
+              data-alt-sv="Gabriella och Daniel"
+              data-alt-hr="Gabriella i Daniel"
             />
           </div>
           
@@ -195,7 +207,9 @@
                   <span class="lang-sv">Datum</span>
                   <span class="lang-hr">Datum</span>
                 </strong>
-                : 20 juni / lipnja 2026
+                :
+                <span class="lang-sv">20 juni 2026</span>
+                <span class="lang-hr">20. lipnja 2026.</span>
               </li>
               <li>
                 <strong>
@@ -215,7 +229,13 @@
             </ul>
           </div>
           <div>
-            <div class="map-wrap" aria-label="Karta">
+            <div
+              class="map-wrap"
+              id="venueMapWrap"
+              aria-label="Karta"
+              data-aria-sv="Karta"
+              data-aria-hr="Karta"
+            >
               <iframe
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -224,9 +244,12 @@
               ></iframe>
             </div>
             <a
+              id="mapsLinkBtn"
               href="https://maps.app.goo.gl/kYJCjdpp2Krz6uvm8"
               class="btn btn--ghost"
               aria-label="Öppna karta i Google Maps"
+              data-aria-sv="Öppna karta i Google Maps"
+              data-aria-hr="Otvori Google Maps"
               ><span class="lang-sv">Öppna Google Maps</span>
               <span class="lang-hr">Otvori Google Maps</span></a
             >
@@ -265,27 +288,18 @@
                   <span class="lang-sv">Adress</span>
                   <span class="lang-hr">Adresa</span>
                 </strong>
-                : (fyll i adress till festlokal)
+                :
+                <span class="lang-sv">(fyll i adress till festlokal)</span>
+                <span class="lang-hr">(unesite adresu prostora za proslavu)</span>
               </li>
               <li>
                 <strong>
                   <span class="lang-sv">Tid</span>
                   <span class="lang-hr">Vrijeme</span>
                 </strong>
-                : cirka kl. 17.00 – sent
-              </li>
-              <li>
-                <strong>
-                  <span class="lang-sv">Bar</span>
-                  <span class="lang-hr">Bar</span>
-                </strong>
                 :
-                <span class="lang-sv">
-                  Information om dryck, betalning osv.
-                </span>
-                <span class="lang-hr">
-                  Informacije o piću, plaćanju itd.
-                </span>
+                <span class="lang-sv">cirka kl. 17.00 – tills skorna börjar kännas som en dålig idé (eller längre, vi dömer ingen)</span>
+                <span class="lang-hr">oko 17:00 – dok cipele ne počnu izgledati kao loša ideja (ili duže – nitko neće suditi)</span>
               </li>
             </ul>
           </div>
@@ -344,7 +358,10 @@
           </label>
           <input id="name" name="name" type="text" required />
 
-          <label for="email">E-post</label>
+          <label for="email">
+            <span class="lang-sv">E-post</span>
+            <span class="lang-hr">E-pošta</span>
+          </label>
           <input id="email" name="email" type="email" required />
 
           <label for="phone">
@@ -417,7 +434,7 @@
             </span>
             <span class="lang-hr">
               Vaša prisutnost na našem danu najveći je dar – ali ako ipak želite
-              nešto pokloniti, naš popis želja hittar ćete putem poveznice
+              nešto pokloniti, naš popis želja možete pronaći putem poveznice
               ispod.
             </span>
           </p>

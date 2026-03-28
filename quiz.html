@@ -26,7 +26,13 @@
 
     <header class="site-header">
       <nav class="nav">
-        <a href="index.html#top" class="nav__logo">G &amp; D</a>
+        <div class="nav__start">
+          <a href="index.html#top" class="nav__logo">G &amp; D</a>
+          <button type="button" class="nav__lang btn btn--ghost" id="langToggle">
+            <span class="lang-sv">Hrvatski</span>
+            <span class="lang-hr">Svenska</span>
+          </button>
+        </div>
         <a class="nav__cta btn btn--primary" href="index.html#top">
           <span class="lang-sv">Tillbaka</span>
           <span class="lang-hr">Natrag</span>
@@ -81,7 +87,7 @@
 
           <label for="quizEmail">
             <span class="lang-sv">E-post</span>
-            <span class="lang-hr">E-mail</span>
+            <span class="lang-hr">E-pošta</span>
           </label>
           <input id="quizEmail" name="email" type="email" required />
 
@@ -91,10 +97,10 @@
           </label>
           <select id="q1" name="q1" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">Alternativ A</option>
-            <option value="B">Alternativ B</option>
-            <option value="C">Alternativ C</option>
-            <option value="D">Alternativ D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
           </select>
 
           <label for="q2">
@@ -103,10 +109,10 @@
           </label>
           <select id="q2" name="q2" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">Alternativ A</option>
-            <option value="B">Alternativ B</option>
-            <option value="C">Alternativ C</option>
-            <option value="D">Alternativ D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
           </select>
 
           <label for="q3">
@@ -115,10 +121,10 @@
           </label>
           <select id="q3" name="q3" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">Alternativ A</option>
-            <option value="B">Alternativ B</option>
-            <option value="C">Alternativ C</option>
-            <option value="D">Alternativ D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
           </select>
 
           <label for="q4">
@@ -127,10 +133,10 @@
           </label>
           <select id="q4" name="q4" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">Alternativ A</option>
-            <option value="B">Alternativ B</option>
-            <option value="C">Alternativ C</option>
-            <option value="D">Alternativ D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
           </select>
 
           <label for="q5">
@@ -139,10 +145,10 @@
           </label>
           <select id="q5" name="q5" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">Alternativ A</option>
-            <option value="B">Alternativ B</option>
-            <option value="C">Alternativ C</option>
-            <option value="D">Alternativ D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
           </select>
 
           <label for="quizExtra">
@@ -153,7 +159,8 @@
             id="quizExtra"
             name="quiz_extra"
             rows="4"
-            placeholder="Skriv ditt svar här..."
+            data-placeholder-sv="Skriv ditt svar här..."
+            data-placeholder-hr="Ovdje napišite svoj odgovor..."
           ></textarea>
 
           <button class="btn btn--primary" type="submit">

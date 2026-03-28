@@ -26,7 +26,13 @@
 
     <header class="site-header">
       <nav class="nav">
-        <a href="index.html#top" class="nav__logo">G &amp; D</a>
+        <div class="nav__start">
+          <a href="index.html#top" class="nav__logo">G &amp; D</a>
+          <button type="button" class="nav__lang btn btn--ghost" id="langToggle">
+            <span class="lang-sv">Hrvatski</span>
+            <span class="lang-hr">Svenska</span>
+          </button>
+        </div>
         <a class="nav__cta btn btn--primary" href="index.html#top">
           <span class="lang-sv">Tillbaka</span>
           <span class="lang-hr">Natrag</span>
@@ -72,7 +78,10 @@
           </label>
           <input id="name" name="name" type="text" required />
 
-          <label for="email">E-post</label>
+          <label for="email">
+            <span class="lang-sv">E-post</span>
+            <span class="lang-hr">E-pošta</span>
+          </label>
           <input id="email" name="email" type="email" required />
 
           <label for="phone">

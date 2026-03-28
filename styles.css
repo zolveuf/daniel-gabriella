@@ -68,6 +68,19 @@ a {
   text-transform: uppercase;
 }
 
+.nav__start {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.nav__lang {
+  font-size: 0.8rem;
+  padding: 0.45rem 0.75rem;
+  white-space: nowrap;
+}
+
 .nav__links {
   list-style: none;
   display: flex;
@@ -542,6 +555,10 @@ body.nav-open {
   .nav__links {
     position: fixed;
     inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
     padding: 5.5rem 2.5rem 3rem;
     background: rgba(255, 255, 255, 0.96);
     display: flex;
