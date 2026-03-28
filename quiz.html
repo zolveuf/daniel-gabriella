@@ -52,16 +52,13 @@
             <span class="lang-hr">Kviz o mladencima</span>
           </h2>
           <p class="section__muted">
-            <span class="lang-sv">
-              Du kan lägga in frågorna senare. Fyll bara i dina svar när formuläret är klart.
-            </span>
-            <span class="lang-hr">
-              Pitanja možete dodati kasnije. Unesite vaše odgovore kada obrazac bude gotov.
-            </span>
+            <span class="lang-sv">Svara på frågorna nedan – lycka till!</span>
+            <span class="lang-hr">Odgovorite na pitanja ispod – sretno!</span>
           </p>
         </div>
 
         <form
+          id="quizForm"
           class="rsvp-form"
           action="https://formkeep.com/f/9791e76f76c7"
           method="POST"
@@ -78,6 +75,10 @@
           <input type="hidden" name="_redirect_url" value="" data-redirect-path="tack.html?source=quiz" />
           <input type="hidden" name="_next" value="" data-redirect-path="tack.html?source=quiz" />
           <input type="hidden" name="form_type" value="quiz" />
+          <input type="hidden" name="quiz_correct_count" id="quizCorrectCount" value="" />
+          <input type="hidden" name="quiz_total_questions" value="9" />
+          <input type="hidden" name="quiz_score_summary" id="quizScoreSummary" value="" />
+          <input type="hidden" name="quiz_wrong_questions" id="quizWrongQuestions" value="" />
 
           <label for="quizName">
             <span class="lang-sv">Namn</span>
@@ -92,75 +93,116 @@
           <input id="quizEmail" name="email" type="email" required />
 
           <label for="q1">
-            <span class="lang-sv">Fråga 1 (placeholder)</span>
-            <span class="lang-hr">Pitanje 1 (placeholder)</span>
+            <span class="lang-sv">Var träffades vi första gången?</span>
+            <span class="lang-hr">Gdje smo se prvi put sreli?</span>
           </label>
           <select id="q1" name="q1" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="ljungbydagarna">Ljungbydagarna / Ljungbydagar</option>
+            <option value="skolavslutning_9">Skolavslutningen i åk 9 / Završetak škole u 9. razredu</option>
+            <option value="fotbollsmatch">På en fotbollsmatch / Na nogometnoj utakmici</option>
           </select>
 
           <label for="q2">
-            <span class="lang-sv">Fråga 2 (placeholder)</span>
-            <span class="lang-hr">Pitanje 2 (placeholder)</span>
+            <span class="lang-sv">Vilken månad blev vi ett par?</span>
+            <span class="lang-hr">U kojem smo mjesecu postali par?</span>
           </label>
           <select id="q2" name="q2" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="februari">Februari / veljača</option>
+            <option value="juni">Juni / lipanj</option>
+            <option value="oktober">Oktober / listopad</option>
           </select>
 
           <label for="q3">
-            <span class="lang-sv">Fråga 3 (placeholder)</span>
-            <span class="lang-hr">Pitanje 3 (placeholder)</span>
+            <span class="lang-sv">Vad gjorde vi på vår första dejt som par?</span>
+            <span class="lang-hr">Što smo radili na prvom spoju kao par?</span>
           </label>
           <select id="q3" name="q3" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="glass_sjo">Åt glass vid en sjö / Sladoled kod jezera</option>
+            <option value="shoppade">Shoppade / Šoping</option>
+            <option value="gymmade">Gymmade / Teretana</option>
           </select>
 
           <label for="q4">
-            <span class="lang-sv">Fråga 4 (placeholder)</span>
-            <span class="lang-hr">Pitanje 4 (placeholder)</span>
+            <span class="lang-sv">Hur länge var vi tillsammans innan förlovningen?</span>
+            <span class="lang-hr">Koliko dugo smo bili zajedno prije zaruka?</span>
           </label>
           <select id="q4" name="q4" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="6_5">6,5 år / 6,5 godina</option>
+            <option value="4_5">4,5 år / 4,5 godina</option>
+            <option value="8_5">8,5 år / 8,5 godina</option>
           </select>
 
           <label for="q5">
-            <span class="lang-sv">Fråga 5 (placeholder)</span>
-            <span class="lang-hr">Pitanje 5 (placeholder)</span>
+            <span class="lang-sv">Om vi skaffar en hund, vad ska den heta?</span>
+            <span class="lang-hr">Ako dobijemo psa, kako će se zvati?</span>
           </label>
           <select id="q5" name="q5" required>
             <option value="">Välj / Odaberite</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+            <option value="cookie">Cookie</option>
+            <option value="pompom">Pompom</option>
+            <option value="pepsi">Pepsi</option>
+          </select>
+
+          <label for="q6">
+            <span class="lang-sv">Vad kallar Daniel Gabriella för?</span>
+            <span class="lang-hr">Kako Daniel zove Gabriellu?</span>
+          </label>
+          <p class="section__muted quiz__hint">
+            <span class="lang-sv">Tips: två av alternativen räknas som rätt.</span>
+            <span class="lang-hr">Savjet: dva odgovora smatraju se točnima.</span>
+          </p>
+          <select id="q6" name="q6" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="babben">Babben</option>
+            <option value="bab">Bab</option>
+            <option value="babe">Babe</option>
+          </select>
+
+          <label for="q7">
+            <span class="lang-sv">Vad gav Gabriella Daniel i julklapp 2025?</span>
+            <span class="lang-hr">Što je Gabriella Danielu poklonila za Božić 2025.?</span>
+          </label>
+          <select id="q7" name="q7" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="matcha_te">Matcha te / Matcha čaj</option>
+            <option value="buggkurs">Buggkurs / Tečaj buga</option>
+            <option value="fiskespo">Fiskespö / Štap za ribolov</option>
+          </select>
+
+          <label for="q8">
+            <span class="lang-sv">Vem är tröttast?</span>
+            <span class="lang-hr">Tko je najumorniji?</span>
+          </label>
+          <select id="q8" name="q8" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="daniel">Daniel</option>
+            <option value="gabriella">Gabriella</option>
+          </select>
+
+          <label for="q9">
+            <span class="lang-sv">Vem är slarvigast?</span>
+            <span class="lang-hr">Tko je najnemarniji?</span>
+          </label>
+          <select id="q9" name="q9" required>
+            <option value="">Välj / Odaberite</option>
+            <option value="gabriella">Gabriella</option>
+            <option value="daniel">Daniel</option>
           </select>
 
           <label for="quizExtra">
-            <span class="lang-sv">Utslagsfråga / extra kommentar (valfritt)</span>
-            <span class="lang-hr">Dodatno pitanje / komentar (nije obavezno)</span>
+            <span class="lang-sv">Extra kommentar (valfritt)</span>
+            <span class="lang-hr">Dodatni komentar (nije obavezno)</span>
           </label>
           <textarea
             id="quizExtra"
             name="quiz_extra"
-            rows="4"
-            data-placeholder-sv="Skriv ditt svar här..."
-            data-placeholder-hr="Ovdje napišite svoj odgovor..."
+            rows="3"
+            data-placeholder-sv="Hälsning eller annat du vill lägga till…"
+            data-placeholder-hr="Pozdrav ili bilo što želite dodati…"
           ></textarea>
 
           <button class="btn btn--primary" type="submit">

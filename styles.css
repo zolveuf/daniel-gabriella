@@ -655,6 +655,31 @@ body.nav-open {
   max-width: 760px;
 }
 
+.quiz__hint {
+  margin: -0.35rem 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.tack-quiz .tack-quiz__lead {
+  font-size: 1.05rem;
+}
+
+.tack-quiz__signoff {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.tack-actions__secondary {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .tack-actions__secondary {
+    margin-left: 0;
+    margin-top: 0.65rem;
+  }
+}
+
 .rsvp-form {
   margin-top: 1.2rem;
   display: grid;

@@ -125,6 +125,65 @@ if (langToggle) {
   });
 }
 
+const QUIZ_TOTAL = 9;
+const QUIZ_ANSWER_KEY = {
+  q1: ["ljungbydagarna"],
+  q2: ["februari"],
+  q3: ["glass_sjo"],
+  q4: ["6_5"],
+  q5: ["cookie"],
+  q6: ["babben", "bab"],
+  q7: ["matcha_te"],
+  q8: ["daniel"],
+  q9: ["gabriella"],
+};
+
+function scoreQuizSubmission(form) {
+  let score = 0;
+  const wrong = [];
+  for (let i = 1; i <= QUIZ_TOTAL; i++) {
+    const key = `q${i}`;
+    const allowed = QUIZ_ANSWER_KEY[key];
+    if (!allowed) continue;
+    const field = form.elements.namedItem(key);
+    const val = field && field.value;
+    if (!val) continue;
+    if (allowed.includes(val)) score += 1;
+    else wrong.push(String(i));
+  }
+  return { score, wrong };
+}
+
+const quizForm = document.getElementById("quizForm");
+if (quizForm) {
+  quizForm.addEventListener("submit", () => {
+    const { score, wrong } = scoreQuizSubmission(quizForm);
+    const countEl = document.getElementById("quizCorrectCount");
+    const summaryEl = document.getElementById("quizScoreSummary");
+    const wrongEl = document.getElementById("quizWrongQuestions");
+    if (countEl) countEl.value = String(score);
+    if (summaryEl) summaryEl.value = `${score}/${QUIZ_TOTAL}`;
+    if (wrongEl) wrongEl.value = wrong.length ? wrong.join(",") : "-";
+  });
+}
+
+function initTackPageVariants() {
+  const osa = document.getElementById("tackSectionOsa");
+  const quiz = document.getElementById("tackSectionQuiz");
+  if (!osa || !quiz) return;
+  const source = new URLSearchParams(window.location.search).get("source");
+  if (source === "quiz") {
+    osa.hidden = true;
+    quiz.hidden = false;
+    document.title = "Tack för quizet! – Gabriella & Daniel";
+  } else {
+    osa.hidden = false;
+    quiz.hidden = true;
+  }
+}
+
+initTackPageVariants();
+
 // FormKeep expects absolute redirect URLs. Build them at runtime.
 const redirectInputs = document.querySelectorAll("input[data-redirect-path]");
 if (redirectInputs.length) {

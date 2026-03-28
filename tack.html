@@ -41,7 +41,10 @@
     </header>
 
     <main>
-      <section class="section section--accent rsvp-form-section">
+      <section
+        id="tackSectionOsa"
+        class="section section--accent rsvp-form-section"
+      >
         <div class="section__header">
           <p class="section__eyebrow">
             <span class="lang-sv">Tack</span>
@@ -54,12 +57,8 @@
         </div>
         <div class="section__content">
           <p>
-            <span class="lang-sv">
-              Vi har tagit emot din inskickning!
-            </span>
-            <span class="lang-hr">
-              Zaprimili smo vašu prijavu!
-            </span>
+            <span class="lang-sv">Vi har tagit emot din inskickning!</span>
+            <span class="lang-hr">Zaprimili smo vašu prijavu!</span>
           </p>
           <p class="section__muted">
             <span class="lang-sv">Om du inte har gjort quizet än, gör det gärna nu!</span>
@@ -69,9 +68,62 @@
             <span class="lang-sv">Till startsidan</span>
             <span class="lang-hr">Natrag na početnu</span>
           </a>
-          <a href="quiz.html" class="btn btn--ghost" style="margin-left: 0.5rem">
+          <a href="quiz.html" class="btn btn--ghost tack-actions__secondary">
             <span class="lang-sv">Till quizet</span>
             <span class="lang-hr">Na kviz</span>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="tackSectionQuiz"
+        class="section section--accent rsvp-form-section tack-quiz"
+        hidden
+      >
+        <div class="section__header">
+          <p class="section__eyebrow">
+            <span class="lang-sv">Quiz</span>
+            <span class="lang-hr">Kviz</span>
+          </p>
+          <h2>
+            <span class="lang-sv">Tack för att du körde quizet!</span>
+            <span class="lang-hr">Hvala što ste riješili kviz!</span>
+          </h2>
+        </div>
+        <div class="section__content">
+          <p class="tack-quiz__lead">
+            <span class="lang-sv">
+              Dina svar har landat hos oss – helt utan dramatisk poängpresentation på
+              skärmen, för sånt sköter vi i smyg bakom kulisserna.
+            </span>
+            <span class="lang-hr">
+              Vaši su odgovori stigli do nas – bez dramatičnog prikaza bodova na
+              ekranu, to radimo tiho u pozadini.
+            </span>
+          </p>
+          <p>
+            <span class="lang-sv">
+              Du får alltså <strong>inte</strong> veta hur många rätt det blev här och
+              nu. Det får vara vår lilla hemlighet tills vi ses – eller för alltid,
+              beroende på humör.
+            </span>
+            <span class="lang-hr">
+              <strong>Nećete</strong> saznati koliko je točno bilo točno ovdje i
+              sada. To ostaje naša mala tajna dok se ne vidimo – ili zauvijek, ovisno
+              o raspoloženju.
+            </span>
+          </p>
+          <p class="section__muted tack-quiz__signoff">
+            <span class="lang-sv">Puss &amp; kram / Vi ses på bröllopet!</span>
+            <span class="lang-hr">Šaljemo zagrljaj – vidimo se na vjenčanju!</span>
+          </p>
+          <a href="index.html#top" class="btn btn--primary">
+            <span class="lang-sv">Till startsidan</span>
+            <span class="lang-hr">Natrag na početnu</span>
+          </a>
+          <a href="index.html#rsvp" class="btn btn--ghost tack-actions__secondary">
+            <span class="lang-sv">Till anmälan (OSA)</span>
+            <span class="lang-hr">Na prijavu (OSA)</span>
           </a>
         </div>
       </section>
